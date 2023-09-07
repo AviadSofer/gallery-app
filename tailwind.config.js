@@ -8,6 +8,9 @@ export default {
         "2k": "2240px",
         "4k": "3840px",
       },
+      animation: {
+        "loading-spin": "spin 0.5s ease-in infinite",
+      },
     },
   },
   plugins: [],

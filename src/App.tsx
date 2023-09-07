@@ -4,6 +4,7 @@ import Images from "./components/Images";
 import DateNav from "./components/DateNav";
 import getImages from "./api/getImages";
 import getPageByDate from "./helpers/getPageByDate";
+import Loading from "./components/Loading";
 
 const App: React.FC = () => {
   const [images, setImages] = useState<Image[]>([]);
@@ -39,6 +40,8 @@ const App: React.FC = () => {
       <div className="w-full pt-12">
         <Images {...provider} />
       </div>
+
+      <div className="pt-8">{loading && <Loading />}</div>
     </div>
   );
 };

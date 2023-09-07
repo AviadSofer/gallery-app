@@ -11,8 +11,10 @@ const Image: React.FC<ImageProps> = ({ src, alt }) => {
   const onLoadHandle = () => setLoading(false);
 
   return (
-    <>
-      {loading && <div className="h-full w-full animate-pulse bg-gray-300" />}
+    <div className="relative h-full w-full">
+      {loading && (
+        <div className="h-full absolute top-0 w-full animate-pulse bg-gray-300" />
+      )}
 
       {src && (
         <img
@@ -20,10 +22,10 @@ const Image: React.FC<ImageProps> = ({ src, alt }) => {
           alt={alt}
           loading="lazy"
           onLoad={onLoadHandle}
-          className="h-full w-full object-cover"
+          className={`${loading && "opacity-0"} h-full w-full object-cover`}
         />
       )}
-    </>
+    </div>
   );
 };
 
