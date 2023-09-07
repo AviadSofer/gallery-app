@@ -67,7 +67,7 @@ const DatePicker: React.FC<Props> = ({ onChange }) => {
 
   const dateBoxStyle =
     "flex cursor-pointer shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] flex-col items-center py-2 px-4 hover:bg-gray-100 rounded-b-[15px]";
-  const celenderStyle = `${hidden} absolute top-[115%] -translate-x-2/4 translate-y-0 left-2/4 z-50 w-[450px] rounded-[12px] bg-white px-[10px] py-[25px] shadow-[0px_2px_20px_#00000014]`;
+  const celenderStyle = `${hidden} absolute top-[115%] -translate-x-2/4 translate-y-0 left-2/4 z-50 w-[350px] md:w-[450px] rounded-[12px] bg-white px-[10px] py-[25px] shadow-[0px_2px_20px_#00000014]`;
 
   return (
     <div ref={ref} className="relative select-none">
@@ -109,7 +109,7 @@ const DatePicker: React.FC<Props> = ({ onChange }) => {
           {daysInWeek.map((day, i) => (
             <div
               key={i}
-              className="text-center text-[11px] font-bold text-gray-600"
+              className="text-center text-[8px] md:text-[11px] font-bold text-gray-600"
             >
               {day}
             </div>
