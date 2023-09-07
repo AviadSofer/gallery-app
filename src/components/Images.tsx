@@ -19,7 +19,7 @@ const Images: React.FC<ProviderProps> = ({
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.scrollY;
-      const isBottom = scrollTop + windowHeight >= documentHeight - 200;
+      const isBottom = scrollTop + windowHeight >= documentHeight - 500;
       if (!isBottom) return;
 
       // Fetch updeted images
