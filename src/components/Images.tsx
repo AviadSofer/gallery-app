@@ -40,7 +40,7 @@ const Images: React.FC<ProviderProps> = ({
   }, [loading, page]);
 
   return (
-    <div className="w-full grid gap-2 bg-white p-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 fhd:grid-cols-5 2k:grid-cols-6 4k:grid-cols-7">
+    <div className="w-full grid gap-2 bg-white p-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
       {images.map(({ download_url, author }, i) => (
         <div key={i} className="w-full aspect-video">
           <Image src={download_url} alt={author} />

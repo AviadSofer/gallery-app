@@ -9,6 +9,9 @@ const DateNav: React.FC<ProviderProps> = ({
   setPage,
 }) => {
   const onChangeHandle = async (date: Date) => {
+    // Reset
+    setImages([]);
+
     // Calc page
     const page = getPageByDate(date);
 
